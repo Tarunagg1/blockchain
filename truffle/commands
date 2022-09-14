@@ -1,0 +1,5 @@
+1. truffle compile
+2. truffle migrate
+3. truffle migrate --reset
+4. truffle migrate --network goerli
+
