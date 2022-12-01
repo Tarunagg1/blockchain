@@ -94,14 +94,17 @@ const wallletAbi = [
 const contractIntrection = async function () {
     const wallletContract = new ethers.Contract(walletAddress, wallletAbi, provider);
 
-    const contractName = await wallletContract.name();
-    console.log('contractName', contractName);
+    // const contractName = await wallletContract.name();
+    // console.log('contractName', contractName);
 
-    const contractBalance = await wallletContract.contractBalance();
-    console.log('contractBalance', ethers.utils.formatEther(contractBalance));
+    // const contractBalance = await wallletContract.contractBalance();
+    // console.log('contractBalance', ethers.utils.formatEther(contractBalance));
 
-    const userBalance = await wallletContract.accountBalance("0x06D10942523d25192edDbfEd3535b76767E81c07");
-    console.log('userBalance', ethers.utils.formatEther(userBalance));
+    // const userBalance = await wallletContract.accountBalance("0x06D10942523d25192edDbfEd3535b76767E81c07");
+    // console.log('userBalance', ethers.utils.formatEther(userBalance));
+
+    const num = await wallletContract.getValue();
+    console.log('number is ',String(num));
 }
 
 
